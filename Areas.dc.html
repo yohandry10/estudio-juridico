@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>body{margin:0;background:#f5f1e8;} *::selection{background:#9b7a3a;color:#fff;}</style>
+</helmet>
+<div style="background:#f5f1e8; font-family:'Spectral',serif; color:#1b2433;">
+  <dc-import name="SiteHeader" active="areas" hint-size="100%,80px"></dc-import>
+
+  <!-- PAGE HEADER -->
+  <section style="background:#0e1c30; color:#fffdf7; padding:84px 48px;">
+    <div style="max-width:1200px; margin:0 auto;">
+      <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#c2a463;">Áreas de práctica</span>
+      <h1 style="font-family:'Spectral',serif; font-weight:500; font-size:50px; line-height:1.15; margin:22px 0 20px; max-width:760px;">Conocimiento especializado en las materias que definen su negocio.</h1>
+      <p style="font-size:19px; line-height:1.7; color:#b9c2d0; font-weight:300; max-width:620px; margin:0;">Equipos dedicados por materia, coordinados entre sí para resolver asuntos que rara vez caben en una sola especialidad.</p>
+    </div>
+  </section>
+
+  <!-- AREAS LIST -->
+  <section style="max-width:1100px; margin:0 auto; padding:96px 48px;">
+    <sc-for list="{{ areas }}" as="area" hint-placeholder-count="8">
+      <div style="display:grid; grid-template-columns:90px 1fr 1.1fr; gap:40px; padding:44px 0; border-top:1px solid rgba(20,30,50,0.14); align-items:start;">
+        <div style="font-family:'Spectral',serif; font-size:30px; font-weight:400; color:#9b7a3a;">{{ area.num }}</div>
+        <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:28px; line-height:1.2; margin:0; color:#0e1c30;">{{ area.title }}</h2>
+        <div>
+          <p style="font-size:17px; line-height:1.75; color:#4a5260; margin:0 0 18px;">{{ area.desc }}</p>
+          <ul style="list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:8px 10px;">
+            <sc-for list="{{ area.tags }}" as="tag" hint-placeholder-count="3">
+              <li style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.04em; color:#5a6270; background:#ece5d7; padding:6px 13px; border:1px solid rgba(20,30,50,0.08);">{{ tag }}</li>
+            </sc-for>
+          </ul>
+        </div>
+      </div>
+    </sc-for>
+    <div style="border-top:1px solid rgba(20,30,50,0.14);"></div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:#fffdf7; border-top:1px solid rgba(20,30,50,0.1); padding:84px 48px;">
+    <div style="max-width:820px; margin:0 auto; text-align:center;">
+      <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:36px; line-height:1.25; color:#0e1c30; margin:0 0 20px;">¿No encuentra su materia en la lista?</h2>
+      <p style="font-size:18px; line-height:1.7; color:#4a5260; margin:0 0 34px;">Muchos asuntos cruzan varias especialidades. Cuéntenos su caso y formaremos el equipo adecuado.</p>
+      <a href="Contacto.dc.html" style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; color:#fffdf7; background:#0e1c30; padding:16px 38px; display:inline-block;" style-hover="background:#9b7a3a;">Hablar con un abogado</a>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      areas: [
+        { num: '01', title: 'Corporativo y M&A', desc: 'Acompañamos transacciones de fusión y adquisición, joint ventures, reorganizaciones societarias y financiamientos, así como el gobierno corporativo del día a día.', tags: ['Fusiones y adquisiciones', 'Reorganizaciones', 'Gobierno corporativo', 'Contratos comerciales'] },
+        { num: '02', title: 'Tributario', desc: 'Planificación fiscal, precios de transferencia y defensa en fiscalizaciones y controversias ante la SUNAT y el Tribunal Fiscal.', tags: ['Planificación fiscal', 'Fiscalizaciones SUNAT', 'Tribunal Fiscal', 'Precios de transferencia'] },
+        { num: '03', title: 'Laboral', desc: 'Diseño de relaciones laborales, prevención de contingencias, defensa en inspecciones de SUNAFIL y litigio ante el Poder Judicial.', tags: ['Relaciones laborales', 'SUNAFIL', 'Litigio laboral', 'Compliance laboral'] },
+        { num: '04', title: 'Litigios y Arbitraje', desc: 'Estrategia y defensa en procesos judiciales civiles y comerciales, así como en arbitrajes nacionales e internacionales.', tags: ['Litigio civil y comercial', 'Arbitraje nacional', 'Arbitraje internacional', 'Medidas cautelares'] },
+        { num: '05', title: 'Penal Económico y Compliance', desc: 'Programas de cumplimiento, prevención de delitos corporativos y defensa penal de empresas y sus directivos.', tags: ['Compliance', 'Prevención de delitos', 'Defensa penal empresarial', 'Investigaciones internas'] },
+        { num: '06', title: 'Inmobiliario y Construcción', desc: 'Estructuración de proyectos inmobiliarios, contratos de construcción, saneamiento físico-legal y financiamiento.', tags: ['Proyectos inmobiliarios', 'Construcción', 'Saneamiento legal', 'Financiamiento'] },
+        { num: '07', title: 'Regulatorio · Minería y Energía', desc: 'Permisos, contratos sectoriales y relación con reguladores en minería, energía e infraestructura.', tags: ['Permisos sectoriales', 'Minería', 'Energía', 'Infraestructura'] },
+        { num: '08', title: 'Propiedad Intelectual y Competencia', desc: 'Protección de marcas y patentes, libre competencia y defensa ante INDECOPI.', tags: ['Marcas y patentes', 'Libre competencia', 'INDECOPI', 'Protección al consumidor'] },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

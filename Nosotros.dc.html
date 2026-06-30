@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>body{margin:0;background:#f5f1e8;} *::selection{background:#9b7a3a;color:#fff;}</style>
+</helmet>
+<div style="background:#f5f1e8; font-family:'Spectral',serif; color:#1b2433;">
+  <dc-import name="SiteHeader" active="nosotros" hint-size="100%,80px"></dc-import>
+
+  <section style="background:#0e1c30; color:#fffdf7; padding:84px 48px;">
+    <div style="max-width:1200px; margin:0 auto;">
+      <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#c2a463;">Nosotros</span>
+      <h1 style="font-family:'Spectral',serif; font-weight:500; font-size:50px; line-height:1.15; margin:22px 0 20px; max-width:760px;">Una firma construida con paciencia, caso por caso.</h1>
+      <p style="font-size:19px; line-height:1.7; color:#b9c2d0; font-weight:300; max-width:620px; margin:0;">Desde 1998, el mismo principio: defender con rigor los intereses que se nos confían.</p>
+    </div>
+  </section>
+
+  <!-- HISTORIA -->
+  <section style="max-width:1100px; margin:0 auto; padding:96px 48px;">
+    <div style="display:grid; grid-template-columns:1.2fr 0.8fr; gap:64px; align-items:start;">
+      <div>
+        <p style="font-family:'Spectral',serif; font-size:24px; line-height:1.55; color:#0e1c30; font-weight:400; margin:0 0 28px;">El Estudio nació en una pequeña oficina de Miraflores, cuando Ricardo Mendoza y Carla Cárdenas decidieron ejercer el derecho de otra manera: con menos clientes y más dedicación.</p>
+        <p style="font-size:18px; line-height:1.8; color:#4a5260; margin:0 0 22px;">Lo que comenzó como una práctica corporativa y tributaria se convirtió, con los años, en una firma de servicio completo. Crecimos por recomendación, sumando abogados que compartían una misma idea del oficio: estudiar a fondo, anticipar el problema y responder con claridad.</p>
+        <p style="font-size:18px; line-height:1.8; color:#4a5260; margin:0;">Hoy somos un equipo de cuarenta abogados que acompaña a empresas, instituciones y familias en sus decisiones más delicadas. Hemos cambiado de oficina y de tamaño, pero no de manera de trabajar.</p>
+      </div>
+      <div style="aspect-ratio:3/4; background:repeating-linear-gradient(135deg,#e7e0d2,#e7e0d2 12px,#ddd5c4 12px,#ddd5c4 24px); display:flex; align-items:flex-end; padding:20px;">
+        <span style="font-family:'Archivo',monospace; font-size:10.5px; letter-spacing:0.1em; color:#8a8170; background:rgba(255,253,247,0.82); padding:6px 10px; text-transform:uppercase;">Foto · oficina histórica</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section style="background:#fffdf7; border-top:1px solid rgba(20,30,50,0.1); border-bottom:1px solid rgba(20,30,50,0.1); padding:88px 48px;">
+    <div style="max-width:1200px; margin:0 auto;">
+      <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#9b7a3a;">Lo que nos define</span>
+      <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:36px; line-height:1.2; color:#0e1c30; margin:18px 0 52px; max-width:560px;">Tres compromisos que sostienen cada encargo.</h2>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:48px;">
+        <div>
+          <div style="font-family:'Spectral',serif; font-size:30px; color:#9b7a3a; margin-bottom:18px;">I</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:600; font-size:22px; color:#0e1c30; margin:0 0 12px;">Rigor</h3>
+          <p style="font-size:16px; line-height:1.7; color:#5a6270; margin:0;">Estudiamos cada asunto hasta el detalle. Un consejo legal sólo vale si resiste el escrutinio del lado contrario.</p>
+        </div>
+        <div>
+          <div style="font-family:'Spectral',serif; font-size:30px; color:#9b7a3a; margin-bottom:18px;">II</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:600; font-size:22px; color:#0e1c30; margin:0 0 12px;">Discreción</h3>
+          <p style="font-size:16px; line-height:1.7; color:#5a6270; margin:0;">Trabajamos con asuntos sensibles. La confianza de nuestros clientes se cuida con reserva absoluta.</p>
+        </div>
+        <div>
+          <div style="font-family:'Spectral',serif; font-size:30px; color:#9b7a3a; margin-bottom:18px;">III</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:600; font-size:22px; color:#0e1c30; margin:0 0 12px;">Cercanía</h3>
+          <p style="font-size:16px; line-height:1.7; color:#5a6270; margin:0;">Quien firma el contrato es quien atiende su llamada. Sin capas ni intermediarios.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section style="max-width:1000px; margin:0 auto; padding:96px 48px;">
+    <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#9b7a3a;">Trayectoria</span>
+    <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:36px; line-height:1.2; color:#0e1c30; margin:18px 0 52px;">Algunos hitos del camino.</h2>
+    <sc-for list="{{ hitos }}" as="h" hint-placeholder-count="5">
+      <div style="display:grid; grid-template-columns:120px 1fr; gap:36px; padding:28px 0; border-top:1px solid rgba(20,30,50,0.14); align-items:baseline;">
+        <div style="font-family:'Spectral',serif; font-size:26px; font-weight:500; color:#9b7a3a;">{{ h.year }}</div>
+        <p style="font-size:18px; line-height:1.65; color:#3a4250; margin:0;">{{ h.text }}</p>
+      </div>
+    </sc-for>
+    <div style="border-top:1px solid rgba(20,30,50,0.14);"></div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      hitos: [
+        { year: '1998', text: 'Ricardo Mendoza y Carla Cárdenas fundan el Estudio en Miraflores, con foco en derecho corporativo y tributario.' },
+        { year: '2005', text: 'La firma se traslada a San Isidro y abre sus áreas de litigios y laboral.' },
+        { year: '2012', text: 'Primer reconocimiento internacional en directorios legales por la práctica tributaria.' },
+        { year: '2018', text: 'Se incorpora el área de penal económico y compliance ante la nueva regulación de responsabilidad de personas jurídicas.' },
+        { year: '2024', text: 'El Estudio alcanza los 40 abogados y consolida su práctica de arbitraje internacional.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

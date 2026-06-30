@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#f5f1e8; }
+    *::selection { background:#9b7a3a; color:#fff; }
+  </style>
+</helmet>
+<div style="background:#f5f1e8; font-family:'Spectral',serif; color:#1b2433; min-height:100vh;">
+
+  <dc-import name="SiteHeader" active="inicio" hint-size="100%,80px"></dc-import>
+
+  <!-- HERO -->
+  <section style="background:#0e1c30; color:#fffdf7; padding:0; position:relative; overflow:hidden;">
+    <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1.08fr 0.92fr; gap:0; min-height:600px;">
+      <div style="padding:96px 56px 96px 0; display:flex; flex-direction:column; justify-content:center;">
+        <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.32em; text-transform:uppercase; color:#c2a463; margin-bottom:28px;">Estudio jurídico · Lima, Perú</span>
+        <h1 style="font-family:'Spectral',serif; font-weight:500; font-size:58px; line-height:1.1; letter-spacing:-0.01em; margin:0 0 28px;">Rigor jurídico al servicio de sus decisiones más importantes.</h1>
+        <p style="font-size:19px; line-height:1.7; color:#b9c2d0; font-weight:300; max-width:520px; margin:0 0 40px;">Asesoramos a empresas, instituciones y personas en las materias más complejas del derecho peruano, con la solidez de una firma consolidada y la cercanía de un equipo dedicado.</p>
+        <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
+          <a href="Equipo.dc.html" style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; color:#0e1c30; background:#c2a463; padding:15px 30px;" style-hover="background:#fffdf7;">Conozca al equipo</a>
+          <a href="Areas.dc.html" style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; color:#fffdf7; padding:15px 6px; border-bottom:1px solid rgba(255,255,255,0.4);" style-hover="border-color:#c2a463;">Áreas de práctica →</a>
+        </div>
+      </div>
+      <div style="position:relative; background:repeating-linear-gradient(135deg,#16263f,#16263f 12px,#1a2c48 12px,#1a2c48 24px); display:flex; align-items:flex-end; justify-content:center; padding:28px; border-left:1px solid rgba(255,255,255,0.08);">
+        <span style="font-family:'Archivo',monospace; font-size:11px; letter-spacing:0.14em; color:rgba(255,255,255,0.5); background:rgba(14,28,48,0.65); padding:7px 12px; text-transform:uppercase;">Fotografía · fachada de la oficina, San Isidro</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAT STRIP -->
+  <section style="background:#fffdf7; border-bottom:1px solid rgba(20,30,50,0.1);">
+    <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr);">
+      <div style="padding:40px 28px; border-right:1px solid rgba(20,30,50,0.1);">
+        <div style="font-family:'Spectral',serif; font-size:46px; font-weight:500; color:#0e1c30; line-height:1;">25<span style="color:#9b7a3a;">+</span></div>
+        <div style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#74706a; margin-top:10px;">Años de trayectoria</div>
+      </div>
+      <div style="padding:40px 28px; border-right:1px solid rgba(20,30,50,0.1);">
+        <div style="font-family:'Spectral',serif; font-size:46px; font-weight:500; color:#0e1c30; line-height:1;">40</div>
+        <div style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#74706a; margin-top:10px;">Abogados</div>
+      </div>
+      <div style="padding:40px 28px; border-right:1px solid rgba(20,30,50,0.1);">
+        <div style="font-family:'Spectral',serif; font-size:46px; font-weight:500; color:#0e1c30; line-height:1;">1.200<span style="color:#9b7a3a;">+</span></div>
+        <div style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#74706a; margin-top:10px;">Casos atendidos</div>
+      </div>
+      <div style="padding:40px 28px;">
+        <div style="font-family:'Spectral',serif; font-size:46px; font-weight:500; color:#0e1c30; line-height:1;">8</div>
+        <div style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#74706a; margin-top:10px;">Áreas de práctica</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO / ENFOQUE -->
+  <section style="max-width:1200px; margin:0 auto; padding:104px 48px;">
+    <div style="display:grid; grid-template-columns:0.85fr 1.15fr; gap:72px; align-items:center;">
+      <div style="position:relative; aspect-ratio:4/5; background:repeating-linear-gradient(135deg,#e7e0d2,#e7e0d2 12px,#ddd5c4 12px,#ddd5c4 24px); display:flex; align-items:flex-end; padding:22px;">
+        <span style="font-family:'Archivo',monospace; font-size:11px; letter-spacing:0.12em; color:#8a8170; background:rgba(255,253,247,0.8); padding:7px 11px; text-transform:uppercase;">Retrato · socios fundadores</span>
+      </div>
+      <div>
+        <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#9b7a3a;">Nuestro enfoque</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:38px; line-height:1.25; margin:22px 0 26px; color:#0e1c30;">Un acompañamiento jurídico cercano, construido sobre la confianza.</h2>
+        <p style="font-size:18px; line-height:1.8; color:#4a5260; margin:0 0 22px;">Desde 1998 asesoramos a quienes toman decisiones difíciles. Combinamos el conocimiento profundo del derecho peruano con una comprensión real del negocio y del contexto de cada cliente.</p>
+        <p style="font-size:18px; line-height:1.8; color:#4a5260; margin:0 0 32px;">No medimos nuestro trabajo en escritos, sino en resultados: contratos que sostienen operaciones, defensas que protegen patrimonios y estrategias que evitan el litigio antes de que ocurra.</p>
+        <a href="Nosotros.dc.html" style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; color:#0e1c30; border-bottom:1.5px solid #9b7a3a; padding-bottom:4px;" style-hover="color:#9b7a3a;">Conozca nuestra historia →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS PREVIEW -->
+  <section style="background:#0e1c30; color:#fffdf7; padding:104px 0;">
+    <div style="max-width:1200px; margin:0 auto; padding:0 48px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:56px; flex-wrap:wrap; gap:24px;">
+        <div>
+          <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#c2a463;">Áreas de práctica</span>
+          <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:38px; line-height:1.2; margin:20px 0 0; max-width:560px;">Cobertura integral en las materias que su organización necesita.</h2>
+        </div>
+        <a href="Areas.dc.html" style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; color:#fffdf7; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:4px; white-space:nowrap;" style-hover="border-color:#c2a463; color:#c2a463;">Ver todas →</a>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid rgba(255,255,255,0.14); border-left:1px solid rgba(255,255,255,0.14);">
+        <a href="Areas.dc.html" style="text-decoration:none; color:inherit; padding:38px 32px; border-right:1px solid rgba(255,255,255,0.14); border-bottom:1px solid rgba(255,255,255,0.14); display:block;" style-hover="background:#142844;">
+          <div style="font-family:'Spectral',serif; font-size:15px; color:#c2a463; margin-bottom:18px;">01</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:23px; margin:0 0 12px;">Corporativo y M&amp;A</h3>
+          <p style="font-size:15px; line-height:1.6; color:#9aa6b6; margin:0;">Fusiones, adquisiciones, reorganizaciones y gobierno corporativo.</p>
+        </a>
+        <a href="Areas.dc.html" style="text-decoration:none; color:inherit; padding:38px 32px; border-right:1px solid rgba(255,255,255,0.14); border-bottom:1px solid rgba(255,255,255,0.14); display:block;" style-hover="background:#142844;">
+          <div style="font-family:'Spectral',serif; font-size:15px; color:#c2a463; margin-bottom:18px;">02</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:23px; margin:0 0 12px;">Tributario</h3>
+          <p style="font-size:15px; line-height:1.6; color:#9aa6b6; margin:0;">Planificación, fiscalizaciones y controversias ante SUNAT y el Tribunal Fiscal.</p>
+        </a>
+        <a href="Areas.dc.html" style="text-decoration:none; color:inherit; padding:38px 32px; border-right:1px solid rgba(255,255,255,0.14); border-bottom:1px solid rgba(255,255,255,0.14); display:block;" style-hover="background:#142844;">
+          <div style="font-family:'Spectral',serif; font-size:15px; color:#c2a463; margin-bottom:18px;">03</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:23px; margin:0 0 12px;">Laboral</h3>
+          <p style="font-size:15px; line-height:1.6; color:#9aa6b6; margin:0;">Relaciones laborales, fiscalizaciones de SUNAFIL y litigio laboral.</p>
+        </a>
+        <a href="Areas.dc.html" style="text-decoration:none; color:inherit; padding:38px 32px; border-right:1px solid rgba(255,255,255,0.14); border-bottom:1px solid rgba(255,255,255,0.14); display:block;" style-hover="background:#142844;">
+          <div style="font-family:'Spectral',serif; font-size:15px; color:#c2a463; margin-bottom:18px;">04</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:23px; margin:0 0 12px;">Litigios y Arbitraje</h3>
+          <p style="font-size:15px; line-height:1.6; color:#9aa6b6; margin:0;">Defensa en sede judicial y arbitral, nacional e internacional.</p>
+        </a>
+        <a href="Areas.dc.html" style="text-decoration:none; color:inherit; padding:38px 32px; border-right:1px solid rgba(255,255,255,0.14); border-bottom:1px solid rgba(255,255,255,0.14); display:block;" style-hover="background:#142844;">
+          <div style="font-family:'Spectral',serif; font-size:15px; color:#c2a463; margin-bottom:18px;">05</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:23px; margin:0 0 12px;">Penal Económico</h3>
+          <p style="font-size:15px; line-height:1.6; color:#9aa6b6; margin:0;">Compliance, prevención de delitos y defensa penal empresarial.</p>
+        </a>
+        <a href="Areas.dc.html" style="text-decoration:none; color:inherit; padding:38px 32px; border-right:1px solid rgba(255,255,255,0.14); border-bottom:1px solid rgba(255,255,255,0.14); display:block;" style-hover="background:#142844;">
+          <div style="font-family:'Spectral',serif; font-size:15px; color:#c2a463; margin-bottom:18px;">06</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:23px; margin:0 0 12px;">Inmobiliario</h3>
+          <p style="font-size:15px; line-height:1.6; color:#9aa6b6; margin:0;">Proyectos, construcción, saneamiento físico-legal y financiamiento.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM PREVIEW -->
+  <section style="max-width:1200px; margin:0 auto; padding:104px 48px;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:52px; flex-wrap:wrap; gap:24px;">
+      <div>
+        <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#9b7a3a;">El equipo</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:38px; line-height:1.2; margin:20px 0 0; color:#0e1c30; max-width:520px;">Socios que conocen su industria y responden por su caso.</h2>
+      </div>
+      <a href="Equipo.dc.html" style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; color:#0e1c30; border-bottom:1px solid #9b7a3a; padding-bottom:4px; white-space:nowrap;" style-hover="color:#9b7a3a;">Ver el equipo →</a>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:36px;">
+      <div>
+        <div style="aspect-ratio:3/4; background:repeating-linear-gradient(135deg,#e7e0d2,#e7e0d2 11px,#ddd5c4 11px,#ddd5c4 22px); display:flex; align-items:flex-end; padding:18px; margin-bottom:22px;">
+          <span style="font-family:'Archivo',monospace; font-size:10.5px; letter-spacing:0.1em; color:#8a8170; background:rgba(255,253,247,0.82); padding:6px 10px; text-transform:uppercase;">Retrato</span>
+        </div>
+        <h3 style="font-family:'Spectral',serif; font-weight:600; font-size:22px; margin:0 0 5px; color:#0e1c30;">Ricardo Mendoza Salas</h3>
+        <div style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#9b7a3a; margin-bottom:14px;">Socio fundador · Corporativo</div>
+        <p style="font-size:15.5px; line-height:1.65; color:#5a6270; margin:0;">Lidera operaciones de M&amp;A y reestructuraciones para grupos económicos del país.</p>
+      </div>
+      <div>
+        <div style="aspect-ratio:3/4; background:repeating-linear-gradient(135deg,#e7e0d2,#e7e0d2 11px,#ddd5c4 11px,#ddd5c4 22px); display:flex; align-items:flex-end; padding:18px; margin-bottom:22px;">
+          <span style="font-family:'Archivo',monospace; font-size:10.5px; letter-spacing:0.1em; color:#8a8170; background:rgba(255,253,247,0.82); padding:6px 10px; text-transform:uppercase;">Retrato</span>
+        </div>
+        <h3 style="font-family:'Spectral',serif; font-weight:600; font-size:22px; margin:0 0 5px; color:#0e1c30;">Carla Cárdenas Rivera</h3>
+        <div style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#9b7a3a; margin-bottom:14px;">Socia fundadora · Tributario</div>
+        <p style="font-size:15.5px; line-height:1.65; color:#5a6270; margin:0;">Especialista en controversias tributarias complejas ante SUNAT y el Tribunal Fiscal.</p>
+      </div>
+      <div>
+        <div style="aspect-ratio:3/4; background:repeating-linear-gradient(135deg,#e7e0d2,#e7e0d2 11px,#ddd5c4 11px,#ddd5c4 22px); display:flex; align-items:flex-end; padding:18px; margin-bottom:22px;">
+          <span style="font-family:'Archivo',monospace; font-size:10.5px; letter-spacing:0.1em; color:#8a8170; background:rgba(255,253,247,0.82); padding:6px 10px; text-transform:uppercase;">Retrato</span>
+        </div>
+        <h3 style="font-family:'Spectral',serif; font-weight:600; font-size:22px; margin:0 0 5px; color:#0e1c30;">Augusto Ferreyros León</h3>
+        <div style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#9b7a3a; margin-bottom:14px;">Socio · Litigios y Arbitraje</div>
+        <p style="font-size:15.5px; line-height:1.65; color:#5a6270; margin:0;">Árbitro y litigante con más de 200 procesos en sede judicial y arbitral.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECONOCIMIENTOS -->
+  <section style="background:#fffdf7; border-top:1px solid rgba(20,30,50,0.1); border-bottom:1px solid rgba(20,30,50,0.1); padding:56px 48px;">
+    <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;">
+      <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#74706a; white-space:nowrap;">Reconocidos por</span>
+      <div style="display:flex; align-items:center; gap:48px; flex-wrap:wrap; flex:1; justify-content:space-around;">
+        <span style="font-family:'Spectral',serif; font-size:21px; color:#aaa498; letter-spacing:0.02em;">Chambers &amp; Partners</span>
+        <span style="font-family:'Spectral',serif; font-size:21px; color:#aaa498; letter-spacing:0.02em;">The Legal 500</span>
+        <span style="font-family:'Spectral',serif; font-size:21px; color:#aaa498; letter-spacing:0.02em;">Leaders League</span>
+        <span style="font-family:'Spectral',serif; font-size:21px; color:#aaa498; letter-spacing:0.02em;">Latin Lawyer</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:#0e1c30; padding:96px 48px;">
+    <div style="max-width:760px; margin:0 auto; text-align:center;">
+      <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:42px; line-height:1.2; color:#fffdf7; margin:0 0 22px;">Conversemos sobre su situación.</h2>
+      <p style="font-size:19px; line-height:1.7; color:#b9c2d0; font-weight:300; margin:0 0 38px;">Una primera consulta nos permite entender su caso y proponerle un camino claro. Sin compromiso.</p>
+      <a href="Contacto.dc.html" style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; color:#0e1c30; background:#c2a463; padding:17px 40px; display:inline-block;" style-hover="background:#fffdf7;">Solicitar una consulta</a>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}"></script>
+</body>
+</html>

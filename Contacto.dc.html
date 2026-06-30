@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>body{margin:0;background:#f5f1e8;} *::selection{background:#9b7a3a;color:#fff;}</style>
+</helmet>
+<div style="background:#f5f1e8; font-family:'Spectral',serif; color:#1b2433;">
+  <dc-import name="SiteHeader" active="" hint-size="100%,80px"></dc-import>
+
+  <section style="background:#0e1c30; color:#fffdf7; padding:84px 48px;">
+    <div style="max-width:1200px; margin:0 auto;">
+      <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#c2a463;">Contacto</span>
+      <h1 style="font-family:'Spectral',serif; font-weight:500; font-size:50px; line-height:1.15; margin:22px 0 20px; max-width:720px;">Cuéntenos su caso. Le responderemos con un camino claro.</h1>
+      <p style="font-size:19px; line-height:1.7; color:#b9c2d0; font-weight:300; max-width:580px; margin:0;">La primera conversación es sin compromiso y estrictamente confidencial.</p>
+    </div>
+  </section>
+
+  <section style="max-width:1200px; margin:0 auto; padding:96px 48px;">
+    <div style="display:grid; grid-template-columns:1fr 0.85fr; gap:80px; align-items:start;">
+      <!-- FORM -->
+      <form onsubmit="{{ onSubmit }}" style="display:flex; flex-direction:column; gap:24px;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+          <label style="display:flex; flex-direction:column; gap:8px;">
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#74706a;">Nombre completo</span>
+            <input type="text" style="font-family:'Spectral',serif; font-size:16px; padding:13px 15px; border:1px solid rgba(20,30,50,0.2); background:#fffdf7; color:#1b2433; outline:none;" style-focus="border-color:#9b7a3a;">
+          </label>
+          <label style="display:flex; flex-direction:column; gap:8px;">
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#74706a;">Empresa</span>
+            <input type="text" style="font-family:'Spectral',serif; font-size:16px; padding:13px 15px; border:1px solid rgba(20,30,50,0.2); background:#fffdf7; color:#1b2433; outline:none;" style-focus="border-color:#9b7a3a;">
+          </label>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+          <label style="display:flex; flex-direction:column; gap:8px;">
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#74706a;">Correo electrónico</span>
+            <input type="email" style="font-family:'Spectral',serif; font-size:16px; padding:13px 15px; border:1px solid rgba(20,30,50,0.2); background:#fffdf7; color:#1b2433; outline:none;" style-focus="border-color:#9b7a3a;">
+          </label>
+          <label style="display:flex; flex-direction:column; gap:8px;">
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#74706a;">Teléfono</span>
+            <input type="tel" style="font-family:'Spectral',serif; font-size:16px; padding:13px 15px; border:1px solid rgba(20,30,50,0.2); background:#fffdf7; color:#1b2433; outline:none;" style-focus="border-color:#9b7a3a;">
+          </label>
+        </div>
+        <label style="display:flex; flex-direction:column; gap:8px;">
+          <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#74706a;">Materia de consulta</span>
+          <select style="font-family:'Spectral',serif; font-size:16px; padding:13px 15px; border:1px solid rgba(20,30,50,0.2); background:#fffdf7; color:#1b2433; outline:none;" style-focus="border-color:#9b7a3a;">
+            <option>Corporativo y M&amp;A</option>
+            <option>Tributario</option>
+            <option>Laboral</option>
+            <option>Litigios y Arbitraje</option>
+            <option>Penal Económico</option>
+            <option>Inmobiliario</option>
+            <option>Otra</option>
+          </select>
+        </label>
+        <label style="display:flex; flex-direction:column; gap:8px;">
+          <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#74706a;">Describa brevemente su caso</span>
+          <textarea rows="5" style="font-family:'Spectral',serif; font-size:16px; padding:13px 15px; border:1px solid rgba(20,30,50,0.2); background:#fffdf7; color:#1b2433; outline:none; resize:vertical;" style-focus="border-color:#9b7a3a;"></textarea>
+        </label>
+        <button type="submit" style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:#fffdf7; background:#0e1c30; border:none; padding:16px 0; cursor:pointer; align-self:flex-start; padding-left:40px; padding-right:40px;" style-hover="background:#9b7a3a;">{{ btnLabel }}</button>
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <p style="font-family:'Spectral',serif; font-size:16px; color:#1f6d4a; margin:0;">Gracias. Hemos recibido su mensaje y le responderemos dentro de las próximas 24 horas hábiles.</p>
+        </sc-if>
+      </form>
+
+      <!-- INFO -->
+      <div>
+        <div style="background:#fffdf7; border:1px solid rgba(20,30,50,0.12); padding:36px;">
+          <h3 style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#9b7a3a; margin:0 0 24px;">Oficina principal</h3>
+          <p style="font-family:'Spectral',serif; font-size:17px; line-height:1.75; color:#1b2433; margin:0 0 24px;">Av. Víctor Andrés Belaúnde 280<br>Torre Real, Piso 9 · San Isidro<br>Lima 27, Perú</p>
+          <div style="border-top:1px solid rgba(20,30,50,0.12); padding-top:24px; display:flex; flex-direction:column; gap:14px;">
+            <div>
+              <div style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#74706a; margin-bottom:4px;">Teléfono</div>
+              <div style="font-family:'Spectral',serif; font-size:17px; color:#1b2433;">+51 (1) 612 4400</div>
+            </div>
+            <div>
+              <div style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#74706a; margin-bottom:4px;">Correo</div>
+              <a href="mailto:contacto@mendozacardenas.pe" style="font-family:'Spectral',serif; font-size:17px; color:#1b2433; text-decoration:none; border-bottom:1px solid #9b7a3a;" style-hover="color:#9b7a3a;">contacto@mendozacardenas.pe</a>
+            </div>
+            <div>
+              <div style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#74706a; margin-bottom:4px;">Horario</div>
+              <div style="font-family:'Spectral',serif; font-size:17px; color:#1b2433;">Lunes a viernes, 9:00 – 18:00</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:28px; aspect-ratio:16/10; background:repeating-linear-gradient(135deg,#e7e0d2,#e7e0d2 12px,#ddd5c4 12px,#ddd5c4 24px); display:flex; align-items:flex-end; padding:18px;">
+          <span style="font-family:'Archivo',monospace; font-size:10.5px; letter-spacing:0.1em; color:#8a8170; background:rgba(255,253,247,0.82); padding:6px 10px; text-transform:uppercase;">Mapa · ubicación San Isidro</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    return {
+      sent: this.state.sent,
+      btnLabel: this.state.sent ? 'Mensaje enviado' : 'Enviar consulta',
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+    };
+  }
+}
+</script>
+</body>
+</html>
