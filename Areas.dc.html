@@ -11,24 +11,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>body{margin:0;background:#f5f1e8;} *::selection{background:#9b7a3a;color:#fff;}</style>
+  <style>
+    body{margin:0;background:#f5f1e8;} *::selection{background:#9b7a3a;color:#fff;}
+    @media (max-width: 760px) {
+      .page-header { padding:56px 24px !important; }
+      .page-h1 { font-size:32px !important; }
+      .areas-section { padding:56px 24px !important; }
+      .area-row { grid-template-columns:1fr !important; gap:14px !important; padding:32px 0 !important; }
+      .cta-section { padding:56px 24px !important; }
+      .cta-h2 { font-size:28px !important; }
+    }
+  </style>
 </helmet>
 <div style="background:#f5f1e8; font-family:'Spectral',serif; color:#1b2433;">
   <dc-import name="SiteHeader" active="areas" hint-size="100%,80px"></dc-import>
 
   <!-- PAGE HEADER -->
-  <section style="background:#0e1c30; color:#fffdf7; padding:84px 48px;">
+  <section class="page-header" style="background:#0e1c30; color:#fffdf7; padding:84px 48px;">
     <div style="max-width:1200px; margin:0 auto;">
       <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#c2a463;">Áreas de práctica</span>
-      <h1 style="font-family:'Spectral',serif; font-weight:500; font-size:50px; line-height:1.15; margin:22px 0 20px; max-width:760px;">Conocimiento especializado en las materias que definen su negocio.</h1>
+      <h1 class="page-h1" style="font-family:'Spectral',serif; font-weight:500; font-size:50px; line-height:1.15; margin:22px 0 20px; max-width:760px;">Conocimiento especializado en las materias que definen su negocio.</h1>
       <p style="font-size:19px; line-height:1.7; color:#b9c2d0; font-weight:300; max-width:620px; margin:0;">Equipos dedicados por materia, coordinados entre sí para resolver asuntos que rara vez caben en una sola especialidad.</p>
     </div>
   </section>
 
   <!-- AREAS LIST -->
-  <section style="max-width:1100px; margin:0 auto; padding:96px 48px;">
+  <section class="areas-section" style="max-width:1100px; margin:0 auto; padding:96px 48px;">
     <sc-for list="{{ areas }}" as="area" hint-placeholder-count="8">
-      <div style="display:grid; grid-template-columns:90px 1fr 1.1fr; gap:40px; padding:44px 0; border-top:1px solid rgba(20,30,50,0.14); align-items:start;">
+      <div class="area-row" style="display:grid; grid-template-columns:90px 1fr 1.1fr; gap:40px; padding:44px 0; border-top:1px solid rgba(20,30,50,0.14); align-items:start;">
         <div style="font-family:'Spectral',serif; font-size:30px; font-weight:400; color:#9b7a3a;">{{ area.num }}</div>
         <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:28px; line-height:1.2; margin:0; color:#0e1c30;">{{ area.title }}</h2>
         <div>
@@ -45,9 +55,9 @@
   </section>
 
   <!-- CTA -->
-  <section style="background:#fffdf7; border-top:1px solid rgba(20,30,50,0.1); padding:84px 48px;">
+  <section class="cta-section" style="background:#fffdf7; border-top:1px solid rgba(20,30,50,0.1); padding:84px 48px;">
     <div style="max-width:820px; margin:0 auto; text-align:center;">
-      <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:36px; line-height:1.25; color:#0e1c30; margin:0 0 20px;">¿No encuentra su materia en la lista?</h2>
+      <h2 class="cta-h2" style="font-family:'Spectral',serif; font-weight:500; font-size:36px; line-height:1.25; color:#0e1c30; margin:0 0 20px;">¿No encuentra su materia en la lista?</h2>
       <p style="font-size:18px; line-height:1.7; color:#4a5260; margin:0 0 34px;">Muchos asuntos cruzan varias especialidades. Cuéntenos su caso y formaremos el equipo adecuado.</p>
       <a href="Contacto.dc.html" style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; color:#fffdf7; background:#0e1c30; padding:16px 38px; display:inline-block;" style-hover="background:#9b7a3a;">Hablar con un abogado</a>
     </div>

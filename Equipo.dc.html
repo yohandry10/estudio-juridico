@@ -11,23 +11,40 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>body{margin:0;background:#f5f1e8;} *::selection{background:#9b7a3a;color:#fff;}</style>
+  <style>
+    body{margin:0;background:#f5f1e8;} *::selection{background:#9b7a3a;color:#fff;}
+    @media (max-width: 900px) {
+      .socios-grid { grid-template-columns:repeat(2,1fr) !important; }
+      .asociados-grid { grid-template-columns:repeat(2,1fr) !important; }
+    }
+    @media (max-width: 760px) {
+      .page-header { padding:56px 24px !important; }
+      .page-h1 { font-size:32px !important; }
+      .socios-section, .asociados-section { padding-left:24px !important; padding-right:24px !important; }
+      .socios-section { padding-top:56px !important; }
+      .asociados-section { padding-bottom:56px !important; }
+    }
+    @media (max-width: 540px) {
+      .socios-grid { grid-template-columns:1fr !important; }
+      .asociados-grid { grid-template-columns:1fr !important; }
+    }
+  </style>
 </helmet>
 <div style="background:#f5f1e8; font-family:'Spectral',serif; color:#1b2433;">
   <dc-import name="SiteHeader" active="equipo" hint-size="100%,80px"></dc-import>
 
-  <section style="background:#0e1c30; color:#fffdf7; padding:84px 48px;">
+  <section class="page-header" style="background:#0e1c30; color:#fffdf7; padding:84px 48px;">
     <div style="max-width:1200px; margin:0 auto;">
       <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#c2a463;">El equipo</span>
-      <h1 style="font-family:'Spectral',serif; font-weight:500; font-size:50px; line-height:1.15; margin:22px 0 20px; max-width:740px;">Abogados que responden por su nombre y por su caso.</h1>
+      <h1 class="page-h1" style="font-family:'Spectral',serif; font-weight:500; font-size:50px; line-height:1.15; margin:22px 0 20px; max-width:740px;">Abogados que responden por su nombre y por su caso.</h1>
       <p style="font-size:19px; line-height:1.7; color:#b9c2d0; font-weight:300; max-width:600px; margin:0;">Un grupo reducido de socios y asociados que trabaja directamente con cada cliente, sin intermediarios.</p>
     </div>
   </section>
 
   <!-- SOCIOS -->
-  <section style="max-width:1200px; margin:0 auto; padding:96px 48px 64px;">
+  <section class="socios-section" style="max-width:1200px; margin:0 auto; padding:96px 48px 64px;">
     <h2 style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#9b7a3a; margin:0 0 40px; padding-bottom:18px; border-bottom:1px solid rgba(20,30,50,0.14);">Socios</h2>
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:44px 36px;">
+    <div class="socios-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:44px 36px;">
       <sc-for list="{{ socios }}" as="p" hint-placeholder-count="6">
         <div>
           <div style="aspect-ratio:3/4; background:repeating-linear-gradient(135deg,#e7e0d2,#e7e0d2 11px,#ddd5c4 11px,#ddd5c4 22px); display:flex; align-items:flex-end; padding:18px; margin-bottom:22px;">
@@ -43,9 +60,9 @@
   </section>
 
   <!-- ASOCIADOS -->
-  <section style="max-width:1200px; margin:0 auto; padding:32px 48px 96px;">
+  <section class="asociados-section" style="max-width:1200px; margin:0 auto; padding:32px 48px 96px;">
     <h2 style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#9b7a3a; margin:0 0 36px; padding-bottom:18px; border-bottom:1px solid rgba(20,30,50,0.14);">Asociados principales</h2>
-    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:28px;">
+    <div class="asociados-grid" style="display:grid; grid-template-columns:repeat(4,1fr); gap:28px;">
       <sc-for list="{{ asociados }}" as="a" hint-placeholder-count="4">
         <div style="background:#fffdf7; border:1px solid rgba(20,30,50,0.1); padding:26px 24px;">
           <h3 style="font-family:'Spectral',serif; font-weight:600; font-size:19px; margin:0 0 5px; color:#0e1c30;">{{ a.name }}</h3>

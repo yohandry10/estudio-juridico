@@ -11,22 +11,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>body{margin:0;background:#f5f1e8;} *::selection{background:#9b7a3a;color:#fff;}</style>
+  <style>
+    body{margin:0;background:#f5f1e8;} *::selection{background:#9b7a3a;color:#fff;}
+    @media (max-width: 760px) {
+      .page-header { padding:56px 24px !important; }
+      .page-h1 { font-size:32px !important; }
+      .historia-section { padding:56px 24px !important; }
+      .historia-grid { grid-template-columns:1fr !important; gap:32px !important; }
+      .valores-section { padding:56px 24px !important; }
+      .valores-grid { grid-template-columns:1fr !important; gap:32px !important; }
+      .section-h2 { font-size:28px !important; }
+      .timeline-section { padding:56px 24px !important; }
+      .timeline-row { grid-template-columns:1fr !important; gap:8px !important; padding:22px 0 !important; }
+    }
+  </style>
 </helmet>
 <div style="background:#f5f1e8; font-family:'Spectral',serif; color:#1b2433;">
   <dc-import name="SiteHeader" active="nosotros" hint-size="100%,80px"></dc-import>
 
-  <section style="background:#0e1c30; color:#fffdf7; padding:84px 48px;">
+  <section class="page-header" style="background:#0e1c30; color:#fffdf7; padding:84px 48px;">
     <div style="max-width:1200px; margin:0 auto;">
       <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#c2a463;">Nosotros</span>
-      <h1 style="font-family:'Spectral',serif; font-weight:500; font-size:50px; line-height:1.15; margin:22px 0 20px; max-width:760px;">Una firma construida con paciencia, caso por caso.</h1>
+      <h1 class="page-h1" style="font-family:'Spectral',serif; font-weight:500; font-size:50px; line-height:1.15; margin:22px 0 20px; max-width:760px;">Una firma construida con paciencia, caso por caso.</h1>
       <p style="font-size:19px; line-height:1.7; color:#b9c2d0; font-weight:300; max-width:620px; margin:0;">Desde 1998, el mismo principio: defender con rigor los intereses que se nos confían.</p>
     </div>
   </section>
 
   <!-- HISTORIA -->
-  <section style="max-width:1100px; margin:0 auto; padding:96px 48px;">
-    <div style="display:grid; grid-template-columns:1.2fr 0.8fr; gap:64px; align-items:start;">
+  <section class="historia-section" style="max-width:1100px; margin:0 auto; padding:96px 48px;">
+    <div class="historia-grid" style="display:grid; grid-template-columns:1.2fr 0.8fr; gap:64px; align-items:start;">
       <div>
         <p style="font-family:'Spectral',serif; font-size:24px; line-height:1.55; color:#0e1c30; font-weight:400; margin:0 0 28px;">Grupo Legal Ccama &amp; Pillaca nació en una pequeña oficina de Miraflores, cuando Jorge Ccama y Rosa Pillaca decidieron ejercer el derecho de otra manera: con menos clientes y más dedicación.</p>
         <p style="font-size:18px; line-height:1.8; color:#4a5260; margin:0 0 22px;">Lo que comenzó como una práctica corporativa y tributaria se convirtió, con los años, en una firma de servicio completo. Crecimos por recomendación, sumando abogados que compartían una misma idea del oficio: estudiar a fondo, anticipar el problema y responder con claridad.</p>
@@ -39,11 +52,11 @@
   </section>
 
   <!-- VALORES -->
-  <section style="background:#fffdf7; border-top:1px solid rgba(20,30,50,0.1); border-bottom:1px solid rgba(20,30,50,0.1); padding:88px 48px;">
+  <section class="valores-section" style="background:#fffdf7; border-top:1px solid rgba(20,30,50,0.1); border-bottom:1px solid rgba(20,30,50,0.1); padding:88px 48px;">
     <div style="max-width:1200px; margin:0 auto;">
       <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#9b7a3a;">Lo que nos define</span>
-      <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:36px; line-height:1.2; color:#0e1c30; margin:18px 0 52px; max-width:560px;">Tres compromisos que sostienen cada encargo.</h2>
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:48px;">
+      <h2 class="section-h2" style="font-family:'Spectral',serif; font-weight:500; font-size:36px; line-height:1.2; color:#0e1c30; margin:18px 0 52px; max-width:560px;">Tres compromisos que sostienen cada encargo.</h2>
+      <div class="valores-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:48px;">
         <div>
           <div style="font-family:'Spectral',serif; font-size:30px; color:#9b7a3a; margin-bottom:18px;">I</div>
           <h3 style="font-family:'Spectral',serif; font-weight:600; font-size:22px; color:#0e1c30; margin:0 0 12px;">Rigor</h3>
@@ -64,11 +77,11 @@
   </section>
 
   <!-- TIMELINE -->
-  <section style="max-width:1000px; margin:0 auto; padding:96px 48px;">
+  <section class="timeline-section" style="max-width:1000px; margin:0 auto; padding:96px 48px;">
     <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#9b7a3a;">Trayectoria</span>
-    <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:36px; line-height:1.2; color:#0e1c30; margin:18px 0 52px;">Algunos hitos del camino.</h2>
+    <h2 class="section-h2" style="font-family:'Spectral',serif; font-weight:500; font-size:36px; line-height:1.2; color:#0e1c30; margin:18px 0 52px;">Algunos hitos del camino.</h2>
     <sc-for list="{{ hitos }}" as="h" hint-placeholder-count="5">
-      <div style="display:grid; grid-template-columns:120px 1fr; gap:36px; padding:28px 0; border-top:1px solid rgba(20,30,50,0.14); align-items:baseline;">
+      <div class="timeline-row" style="display:grid; grid-template-columns:120px 1fr; gap:36px; padding:28px 0; border-top:1px solid rgba(20,30,50,0.14); align-items:baseline;">
         <div style="font-family:'Spectral',serif; font-size:26px; font-weight:500; color:#9b7a3a;">{{ h.year }}</div>
         <p style="font-size:18px; line-height:1.65; color:#3a4250; margin:0;">{{ h.text }}</p>
       </div>

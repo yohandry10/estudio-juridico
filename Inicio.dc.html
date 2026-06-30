@@ -14,6 +14,33 @@
   <style>
     body { margin:0; background:#f5f1e8; }
     *::selection { background:#9b7a3a; color:#fff; }
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns:1fr !important; min-height:0 !important; }
+      .hero-left { padding:56px 28px !important; }
+      .hero-image { min-height:260px !important; }
+      .stat-grid { grid-template-columns:repeat(2,1fr) !important; }
+      .intro-grid { grid-template-columns:1fr !important; gap:36px !important; }
+      .areas-prev-grid { grid-template-columns:repeat(2,1fr) !important; }
+      .team-grid { grid-template-columns:1fr !important; }
+    }
+    @media (max-width: 760px) {
+      .hero-h1 { font-size:36px !important; }
+      .intro-section, .areas-prev-inner, .team-section, .cta-section { padding-left:24px !important; padding-right:24px !important; }
+      .intro-section { padding-top:64px !important; padding-bottom:64px !important; }
+      .areas-prev-section { padding-top:64px !important; padding-bottom:64px !important; }
+      .team-section { padding-top:64px !important; padding-bottom:64px !important; }
+      .section-h2 { font-size:28px !important; }
+      .stat-grid { grid-template-columns:repeat(2,1fr) !important; }
+      .stat-item { padding:28px 18px !important; }
+      .reco-section { padding:40px 24px !important; }
+      .reco-row { gap:24px !important; justify-content:space-between !important; }
+      .cta-section { padding:64px 24px !important; }
+      .cta-h2 { font-size:30px !important; }
+    }
+    @media (max-width: 520px) {
+      .stat-grid { grid-template-columns:1fr 1fr !important; }
+      .areas-prev-grid { grid-template-columns:1fr !important; }
+    }
   </style>
 </helmet>
 <div style="background:#f5f1e8; font-family:'Spectral',serif; color:#1b2433; min-height:100vh;">
@@ -22,17 +49,17 @@
 
   <!-- HERO -->
   <section style="background:#0e1c30; color:#fffdf7; padding:0; position:relative; overflow:hidden;">
-    <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1.08fr 0.92fr; gap:0; min-height:600px;">
-      <div style="padding:96px 56px 96px 0; display:flex; flex-direction:column; justify-content:center;">
+    <div class="hero-grid" style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1.08fr 0.92fr; gap:0; min-height:600px;">
+      <div class="hero-left" style="padding:96px 56px 96px 0; display:flex; flex-direction:column; justify-content:center;">
         <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.32em; text-transform:uppercase; color:#c2a463; margin-bottom:28px;">Grupo Legal Ccama &amp; Pillaca · Lima, Perú</span>
-        <h1 style="font-family:'Spectral',serif; font-weight:500; font-size:58px; line-height:1.1; letter-spacing:-0.01em; margin:0 0 28px;">Rigor jurídico al servicio de sus decisiones más importantes.</h1>
+        <h1 class="hero-h1" style="font-family:'Spectral',serif; font-weight:500; font-size:58px; line-height:1.1; letter-spacing:-0.01em; margin:0 0 28px;">Rigor jurídico al servicio de sus decisiones más importantes.</h1>
         <p style="font-size:19px; line-height:1.7; color:#b9c2d0; font-weight:300; max-width:520px; margin:0 0 40px;">Grupo Legal Ccama &amp; Pillaca asesora a empresas, instituciones y personas en las materias más complejas del derecho peruano, con la solidez de una firma consolidada y la cercanía de un equipo dedicado.</p>
         <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
           <a href="Equipo.dc.html" style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; color:#0e1c30; background:#c2a463; padding:15px 30px;" style-hover="background:#fffdf7;">Conozca al equipo</a>
           <a href="Areas.dc.html" style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; color:#fffdf7; padding:15px 6px; border-bottom:1px solid rgba(255,255,255,0.4);" style-hover="border-color:#c2a463;">Áreas de práctica →</a>
         </div>
       </div>
-      <div style="position:relative; background:repeating-linear-gradient(135deg,#16263f,#16263f 12px,#1a2c48 12px,#1a2c48 24px); display:flex; align-items:flex-end; justify-content:center; padding:28px; border-left:1px solid rgba(255,255,255,0.08);">
+      <div class="hero-image" style="position:relative; background:repeating-linear-gradient(135deg,#16263f,#16263f 12px,#1a2c48 12px,#1a2c48 24px); display:flex; align-items:flex-end; justify-content:center; padding:28px; border-left:1px solid rgba(255,255,255,0.08);">
         <span style="font-family:'Archivo',monospace; font-size:11px; letter-spacing:0.14em; color:rgba(255,255,255,0.5); background:rgba(14,28,48,0.65); padding:7px 12px; text-transform:uppercase;">Fotografía · fachada de la oficina, San Isidro</span>
       </div>
     </div>
@@ -40,20 +67,20 @@
 
   <!-- STAT STRIP -->
   <section style="background:#fffdf7; border-bottom:1px solid rgba(20,30,50,0.1);">
-    <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr);">
-      <div style="padding:40px 28px; border-right:1px solid rgba(20,30,50,0.1);">
+    <div class="stat-grid" style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr);">
+      <div class="stat-item" style="padding:40px 28px; border-right:1px solid rgba(20,30,50,0.1);">
         <div style="font-family:'Spectral',serif; font-size:46px; font-weight:500; color:#0e1c30; line-height:1;">25<span style="color:#9b7a3a;">+</span></div>
         <div style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#74706a; margin-top:10px;">Años de trayectoria</div>
       </div>
-      <div style="padding:40px 28px; border-right:1px solid rgba(20,30,50,0.1);">
+      <div class="stat-item" style="padding:40px 28px; border-right:1px solid rgba(20,30,50,0.1);">
         <div style="font-family:'Spectral',serif; font-size:46px; font-weight:500; color:#0e1c30; line-height:1;">40</div>
         <div style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#74706a; margin-top:10px;">Abogados</div>
       </div>
-      <div style="padding:40px 28px; border-right:1px solid rgba(20,30,50,0.1);">
+      <div class="stat-item" style="padding:40px 28px; border-right:1px solid rgba(20,30,50,0.1);">
         <div style="font-family:'Spectral',serif; font-size:46px; font-weight:500; color:#0e1c30; line-height:1;">1.200<span style="color:#9b7a3a;">+</span></div>
         <div style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#74706a; margin-top:10px;">Casos atendidos</div>
       </div>
-      <div style="padding:40px 28px;">
+      <div class="stat-item" style="padding:40px 28px;">
         <div style="font-family:'Spectral',serif; font-size:46px; font-weight:500; color:#0e1c30; line-height:1;">8</div>
         <div style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#74706a; margin-top:10px;">Áreas de práctica</div>
       </div>
@@ -61,14 +88,14 @@
   </section>
 
   <!-- INTRO / ENFOQUE -->
-  <section style="max-width:1200px; margin:0 auto; padding:104px 48px;">
-    <div style="display:grid; grid-template-columns:0.85fr 1.15fr; gap:72px; align-items:center;">
+  <section class="intro-section" style="max-width:1200px; margin:0 auto; padding:104px 48px;">
+    <div class="intro-grid" style="display:grid; grid-template-columns:0.85fr 1.15fr; gap:72px; align-items:center;">
       <div style="position:relative; aspect-ratio:4/5; background:repeating-linear-gradient(135deg,#e7e0d2,#e7e0d2 12px,#ddd5c4 12px,#ddd5c4 24px); display:flex; align-items:flex-end; padding:22px;">
         <span style="font-family:'Archivo',monospace; font-size:11px; letter-spacing:0.12em; color:#8a8170; background:rgba(255,253,247,0.8); padding:7px 11px; text-transform:uppercase;">Retrato · socios fundadores</span>
       </div>
       <div>
         <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#9b7a3a;">Nuestro enfoque</span>
-        <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:38px; line-height:1.25; margin:22px 0 26px; color:#0e1c30;">Un acompañamiento jurídico cercano, construido sobre la confianza.</h2>
+        <h2 class="section-h2" style="font-family:'Spectral',serif; font-weight:500; font-size:38px; line-height:1.25; margin:22px 0 26px; color:#0e1c30;">Un acompañamiento jurídico cercano, construido sobre la confianza.</h2>
         <p style="font-size:18px; line-height:1.8; color:#4a5260; margin:0 0 22px;">Desde 1998 asesoramos a quienes toman decisiones difíciles. Combinamos el conocimiento profundo del derecho peruano con una comprensión real del negocio y del contexto de cada cliente.</p>
         <p style="font-size:18px; line-height:1.8; color:#4a5260; margin:0 0 32px;">No medimos nuestro trabajo en escritos, sino en resultados: contratos que sostienen operaciones, defensas que protegen patrimonios y estrategias que evitan el litigio antes de que ocurra.</p>
         <a href="Nosotros.dc.html" style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; color:#0e1c30; border-bottom:1.5px solid #9b7a3a; padding-bottom:4px;" style-hover="color:#9b7a3a;">Conozca nuestra historia →</a>
@@ -77,16 +104,16 @@
   </section>
 
   <!-- AREAS PREVIEW -->
-  <section style="background:#0e1c30; color:#fffdf7; padding:104px 0;">
-    <div style="max-width:1200px; margin:0 auto; padding:0 48px;">
+  <section class="areas-prev-section" style="background:#0e1c30; color:#fffdf7; padding:104px 0;">
+    <div class="areas-prev-inner" style="max-width:1200px; margin:0 auto; padding:0 48px;">
       <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:56px; flex-wrap:wrap; gap:24px;">
         <div>
           <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#c2a463;">Áreas de práctica</span>
-          <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:38px; line-height:1.2; margin:20px 0 0; max-width:560px;">Cobertura integral en las materias que su organización necesita.</h2>
+          <h2 class="section-h2" style="font-family:'Spectral',serif; font-weight:500; font-size:38px; line-height:1.2; margin:20px 0 0; max-width:560px;">Cobertura integral en las materias que su organización necesita.</h2>
         </div>
         <a href="Areas.dc.html" style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; color:#fffdf7; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:4px; white-space:nowrap;" style-hover="border-color:#c2a463; color:#c2a463;">Ver todas →</a>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid rgba(255,255,255,0.14); border-left:1px solid rgba(255,255,255,0.14);">
+      <div class="areas-prev-grid" style="display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid rgba(255,255,255,0.14); border-left:1px solid rgba(255,255,255,0.14);">
         <a href="Areas.dc.html" style="text-decoration:none; color:inherit; padding:38px 32px; border-right:1px solid rgba(255,255,255,0.14); border-bottom:1px solid rgba(255,255,255,0.14); display:block;" style-hover="background:#142844;">
           <div style="font-family:'Spectral',serif; font-size:15px; color:#c2a463; margin-bottom:18px;">01</div>
           <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:23px; margin:0 0 12px;">Corporativo y M&amp;A</h3>
@@ -122,15 +149,15 @@
   </section>
 
   <!-- TEAM PREVIEW -->
-  <section style="max-width:1200px; margin:0 auto; padding:104px 48px;">
+  <section class="team-section" style="max-width:1200px; margin:0 auto; padding:104px 48px;">
     <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:52px; flex-wrap:wrap; gap:24px;">
       <div>
         <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#9b7a3a;">El equipo</span>
-        <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:38px; line-height:1.2; margin:20px 0 0; color:#0e1c30; max-width:520px;">Socios que conocen su industria y responden por su caso.</h2>
+        <h2 class="section-h2" style="font-family:'Spectral',serif; font-weight:500; font-size:38px; line-height:1.2; margin:20px 0 0; color:#0e1c30; max-width:520px;">Socios que conocen su industria y responden por su caso.</h2>
       </div>
       <a href="Equipo.dc.html" style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; color:#0e1c30; border-bottom:1px solid #9b7a3a; padding-bottom:4px; white-space:nowrap;" style-hover="color:#9b7a3a;">Ver el equipo →</a>
     </div>
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:36px;">
+    <div class="team-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:36px;">
       <div>
         <div style="aspect-ratio:3/4; background:repeating-linear-gradient(135deg,#e7e0d2,#e7e0d2 11px,#ddd5c4 11px,#ddd5c4 22px); display:flex; align-items:flex-end; padding:18px; margin-bottom:22px;">
           <span style="font-family:'Archivo',monospace; font-size:10.5px; letter-spacing:0.1em; color:#8a8170; background:rgba(255,253,247,0.82); padding:6px 10px; text-transform:uppercase;">Retrato</span>
@@ -159,8 +186,8 @@
   </section>
 
   <!-- RECONOCIMIENTOS -->
-  <section style="background:#fffdf7; border-top:1px solid rgba(20,30,50,0.1); border-bottom:1px solid rgba(20,30,50,0.1); padding:56px 48px;">
-    <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;">
+  <section class="reco-section" style="background:#fffdf7; border-top:1px solid rgba(20,30,50,0.1); border-bottom:1px solid rgba(20,30,50,0.1); padding:56px 48px;">
+    <div class="reco-row" style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;">
       <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#74706a; white-space:nowrap;">Reconocidos por</span>
       <div style="display:flex; align-items:center; gap:48px; flex-wrap:wrap; flex:1; justify-content:space-around;">
         <span style="font-family:'Spectral',serif; font-size:21px; color:#aaa498; letter-spacing:0.02em;">Chambers &amp; Partners</span>
@@ -172,9 +199,9 @@
   </section>
 
   <!-- CTA -->
-  <section style="background:#0e1c30; padding:96px 48px;">
+  <section class="cta-section" style="background:#0e1c30; padding:96px 48px;">
     <div style="max-width:760px; margin:0 auto; text-align:center;">
-      <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:42px; line-height:1.2; color:#fffdf7; margin:0 0 22px;">Conversemos sobre su situación.</h2>
+      <h2 class="cta-h2" style="font-family:'Spectral',serif; font-weight:500; font-size:42px; line-height:1.2; color:#fffdf7; margin:0 0 22px;">Conversemos sobre su situación.</h2>
       <p style="font-size:19px; line-height:1.7; color:#b9c2d0; font-weight:300; margin:0 0 38px;">Una primera consulta nos permite entender su caso y proponerle un camino claro. Sin compromiso.</p>
       <a href="Contacto.dc.html" style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; color:#0e1c30; background:#c2a463; padding:17px 40px; display:inline-block;" style-hover="background:#fffdf7;">Solicitar una consulta</a>
     </div>

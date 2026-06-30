@@ -11,24 +11,33 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>body{margin:0;background:#f5f1e8;} *::selection{background:#9b7a3a;color:#fff;}</style>
+  <style>
+    body{margin:0;background:#f5f1e8;} *::selection{background:#9b7a3a;color:#fff;}
+    @media (max-width: 760px) {
+      .page-header { padding:56px 24px !important; }
+      .page-h1 { font-size:32px !important; }
+      .contacto-section { padding:56px 24px !important; }
+      .contacto-grid { grid-template-columns:1fr !important; gap:48px !important; }
+      .form-row { grid-template-columns:1fr !important; gap:18px !important; }
+    }
+  </style>
 </helmet>
 <div style="background:#f5f1e8; font-family:'Spectral',serif; color:#1b2433;">
   <dc-import name="SiteHeader" active="" hint-size="100%,80px"></dc-import>
 
-  <section style="background:#0e1c30; color:#fffdf7; padding:84px 48px;">
+  <section class="page-header" style="background:#0e1c30; color:#fffdf7; padding:84px 48px;">
     <div style="max-width:1200px; margin:0 auto;">
       <span style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#c2a463;">Contacto</span>
-      <h1 style="font-family:'Spectral',serif; font-weight:500; font-size:50px; line-height:1.15; margin:22px 0 20px; max-width:720px;">Cuéntenos su caso. Le responderemos con un camino claro.</h1>
+      <h1 class="page-h1" style="font-family:'Spectral',serif; font-weight:500; font-size:50px; line-height:1.15; margin:22px 0 20px; max-width:720px;">Cuéntenos su caso. Le responderemos con un camino claro.</h1>
       <p style="font-size:19px; line-height:1.7; color:#b9c2d0; font-weight:300; max-width:580px; margin:0;">La primera conversación es sin compromiso y estrictamente confidencial.</p>
     </div>
   </section>
 
-  <section style="max-width:1200px; margin:0 auto; padding:96px 48px;">
-    <div style="display:grid; grid-template-columns:1fr 0.85fr; gap:80px; align-items:start;">
+  <section class="contacto-section" style="max-width:1200px; margin:0 auto; padding:96px 48px;">
+    <div class="contacto-grid" style="display:grid; grid-template-columns:1fr 0.85fr; gap:80px; align-items:start;">
       <!-- FORM -->
       <form onsubmit="{{ onSubmit }}" style="display:flex; flex-direction:column; gap:24px;">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+        <div class="form-row" style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
           <label style="display:flex; flex-direction:column; gap:8px;">
             <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#74706a;">Nombre completo</span>
             <input type="text" style="font-family:'Spectral',serif; font-size:16px; padding:13px 15px; border:1px solid rgba(20,30,50,0.2); background:#fffdf7; color:#1b2433; outline:none;" style-focus="border-color:#9b7a3a;">
@@ -38,7 +47,7 @@
             <input type="text" style="font-family:'Spectral',serif; font-size:16px; padding:13px 15px; border:1px solid rgba(20,30,50,0.2); background:#fffdf7; color:#1b2433; outline:none;" style-focus="border-color:#9b7a3a;">
           </label>
         </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+        <div class="form-row" style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
           <label style="display:flex; flex-direction:column; gap:8px;">
             <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#74706a;">Correo electrónico</span>
             <input type="email" style="font-family:'Spectral',serif; font-size:16px; padding:13px 15px; border:1px solid rgba(20,30,50,0.2); background:#fffdf7; color:#1b2433; outline:none;" style-focus="border-color:#9b7a3a;">
