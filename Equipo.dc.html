@@ -36,7 +36,7 @@
           <h3 style="font-family:'Spectral',serif; font-weight:600; font-size:23px; margin:0 0 5px; color:#0e1c30;">{{ p.name }}</h3>
           <div style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#9b7a3a; margin-bottom:14px;">{{ p.role }}</div>
           <p style="font-size:15.5px; line-height:1.65; color:#5a6270; margin:0 0 14px;">{{ p.bio }}</p>
-          <a href="mailto:contacto@mendozacardenas.pe" style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.06em; color:#0e1c30; text-decoration:none; border-bottom:1px solid #9b7a3a; padding-bottom:2px;" style-hover="color:#9b7a3a;">{{ p.email }}</a>
+          <a href="mailto:{{ p.email }}" style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.06em; color:#0e1c30; text-decoration:none; border-bottom:1px solid #9b7a3a; padding-bottom:2px;" style-hover="color:#9b7a3a;">{{ p.email }}</a>
         </div>
       </sc-for>
     </div>
@@ -63,12 +63,12 @@ class Component extends DCLogic {
   renderVals() {
     return {
       socios: [
-        { name: 'Ricardo Mendoza Salas', role: 'Socio fundador · Corporativo', bio: 'Lidera operaciones de M&A y reestructuraciones para los principales grupos económicos del país. Más de 30 años de ejercicio.', email: 'r.mendoza@mendozacardenas.pe' },
-        { name: 'Carla Cárdenas Rivera', role: 'Socia fundadora · Tributario', bio: 'Referente en controversias tributarias complejas. Ex funcionaria del Tribunal Fiscal y profesora universitaria.', email: 'c.cardenas@mendozacardenas.pe' },
-        { name: 'Augusto Ferreyros León', role: 'Socio · Litigios y Arbitraje', bio: 'Árbitro y litigante con más de 200 procesos en sede judicial y arbitral, nacional e internacional.', email: 'a.ferreyros@mendozacardenas.pe' },
-        { name: 'Lucía Pacheco Otero', role: 'Socia · Laboral', bio: 'Asesora a empresas en relaciones laborales, reestructuraciones de personal y defensa ante SUNAFIL.', email: 'l.pacheco@mendozacardenas.pe' },
-        { name: 'Diego Salaverry Mora', role: 'Socio · Penal Económico', bio: 'Diseña programas de compliance y defiende a empresas y directivos en investigaciones complejas.', email: 'd.salaverry@mendozacardenas.pe' },
-        { name: 'Verónica Quintana Ruiz', role: 'Socia · Regulatorio', bio: 'Especialista en minería, energía e infraestructura, con foco en la relación con reguladores.', email: 'v.quintana@mendozacardenas.pe' },
+        { name: 'Jorge Ccama Quispe', role: 'Socio fundador · Corporativo', bio: 'Lidera operaciones de M&A y reestructuraciones para los principales grupos económicos del país. Más de 30 años de ejercicio.', email: 'j.ccama@ccamaypillaca.pe' },
+        { name: 'Rosa Pillaca Huamán', role: 'Socia fundadora · Tributario', bio: 'Referente en controversias tributarias complejas. Ex funcionaria del Tribunal Fiscal y profesora universitaria.', email: 'r.pillaca@ccamaypillaca.pe' },
+        { name: 'Augusto Ferreyros León', role: 'Socio · Litigios y Arbitraje', bio: 'Árbitro y litigante con más de 200 procesos en sede judicial y arbitral, nacional e internacional.', email: 'a.ferreyros@ccamaypillaca.pe' },
+        { name: 'Lucía Pacheco Otero', role: 'Socia · Laboral', bio: 'Asesora a empresas en relaciones laborales, reestructuraciones de personal y defensa ante SUNAFIL.', email: 'l.pacheco@ccamaypillaca.pe' },
+        { name: 'Diego Salaverry Mora', role: 'Socio · Penal Económico', bio: 'Diseña programas de compliance y defiende a empresas y directivos en investigaciones complejas.', email: 'd.salaverry@ccamaypillaca.pe' },
+        { name: 'Verónica Quintana Ruiz', role: 'Socia · Regulatorio', bio: 'Especialista en minería, energía e infraestructura, con foco en la relación con reguladores.', email: 'v.quintana@ccamaypillaca.pe' },
       ],
       asociados: [
         { name: 'Andrés Talavera', role: 'Corporativo' },
